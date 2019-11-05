@@ -1,6 +1,10 @@
 ## OsTicket - API
 Solution to use with OsTicket control panel.
 
+## UNDER_CONSTRUCTION
+
+![under_construction](https://i2.wp.com/whiterivernow.com/wp-content/uploads/2018/12/Under-Construction-Sign.png?fit=1230%2C580&ssl=1)
+
 ## Getting started
 
 ### `yarn dev`
