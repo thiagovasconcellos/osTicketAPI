@@ -22,6 +22,10 @@ class User extends Model {
 
     return this;
   }
+
+  static associate(models) {
+    this.belongsTo(models.Organization, { foreignKey: 'org_id' });
+  }
 }
 
 export default User;
