@@ -5,6 +5,9 @@ import TicketClosedByUserController from './app/controllers/TicketClosedByUserCo
 import TicketClosedByDepartmentController from './app/controllers/TicketClosedByDepartmentController';
 import TicketOpenedByOrgController from './app/controllers/TicketOpenedByOrgController';
 import TicketPositionController from './app/controllers/TicketPositionController';
+import TicketByStatus from './app/controllers/TicketByStatus';
+import TicketPendent from './app/controllers/TicketPendent';
+import TicketTop3Staff from './app/controllers/TicketTop3Staff';
 
 const routes = new Router();
 
@@ -16,5 +19,8 @@ routes.get(
 );
 routes.get('/tickets/openeds/ByOrganization', TicketOpenedByOrgController.show);
 routes.get('/tickets/position', TicketPositionController.show);
+routes.get('/tickets/status', TicketByStatus.show);
+routes.get('/tickets/pendents', TicketPendent.show);
+routes.get('/tickets/staff/top3', TicketTop3Staff.show);
 
 export default routes;

@@ -26,7 +26,6 @@ class TicketPositionController {
         [Sequelize.literal('Department.name')],
         [Sequelize.literal('TicketStatus.name')],
       ],
-      //group: [Department.name, TicketStatus.name],
       order: [[Sequelize.literal('Department.name'), 'DESC']],
     });
     return res.json(response);
