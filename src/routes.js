@@ -8,6 +8,8 @@ import TicketPositionController from './app/controllers/TicketPositionController
 import TicketByStatus from './app/controllers/TicketByStatus';
 import TicketPendent from './app/controllers/TicketPendent';
 import TicketTop3Staff from './app/controllers/TicketTop3Staff';
+import TicketByStaffController from './app/controllers/TicketByStaffController';
+import TicketByStaffCountController from './app/controllers/TicketByStaffCountController';
 
 const routes = new Router();
 
@@ -22,5 +24,7 @@ routes.get('/tickets/position', TicketPositionController.show);
 routes.get('/tickets/status', TicketByStatus.show);
 routes.get('/tickets/pendents', TicketPendent.show);
 routes.get('/tickets/staff/top3', TicketTop3Staff.show);
+routes.get('/tickets/staff', TicketByStaffController.show);
+routes.get('/tickets/staff/:id', TicketByStaffCountController.show);
 
 export default routes;

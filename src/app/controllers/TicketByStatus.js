@@ -18,11 +18,12 @@ class TicketByStatus {
       ],
       where: {
         [Op.and]: [
-          { status_id: { [Op.in]: [null, 1, 2] } },
+          { status_id: { [Op.in]: [1, 2, 6, 7, 9] } },
           { dept_id: { [Op.notIn]: [14] } },
         ],
       },
       group: [[sequelize.literal('TicketStatus.name')]],
+      order: ['status_id'],
     });
     return res.json(response);
   }
