@@ -1,10 +1,10 @@
 import sequelize, { Op } from 'sequelize';
-import { startOfMonth, endOfDay } from 'date-fns';
+import { endOfDay, startOfMonth } from 'date-fns';
 
 import Ticket from '../models/Ticket';
 import Staff from '../models/Staff';
 
-class TicketTop3Staff {
+class TicketTopStaff {
   async show(req, res) {
     const today = endOfDay(Date.now());
     const start = startOfMonth(Date.now());
@@ -23,10 +23,10 @@ class TicketTop3Staff {
       },
       group: ['Staff.lastname'],
       order: [[sequelize.literal('count'), 'DESC']],
-      limit: 3,
+      limit: 10,
     });
     return res.json(response);
   }
 }
 
-export default new TicketTop3Staff();
+export default new TicketTopStaff();

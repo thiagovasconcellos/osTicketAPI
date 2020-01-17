@@ -12,6 +12,7 @@ import TicketByStaffController from './app/controllers/TicketByStaffController';
 import TicketByStaffCountController from './app/controllers/TicketByStaffCountController';
 import FinishedTodayController from './app/controllers/FinishedTodayController';
 import TopFinishesController from './app/controllers/TopFinishesController';
+import TicketTopStaff from './app/controllers/TicketTopStaff';
 
 const routes = new Router();
 
@@ -30,5 +31,6 @@ routes.get('/tickets/staff', TicketByStaffController.show);
 routes.get('/tickets/staff/:id', TicketByStaffCountController.show);
 routes.get('/tickets/finishedToday', FinishedTodayController.show);
 routes.get('/tickets/topFinishes', TopFinishesController.show);
+routes.get('/tickets/all', TicketTopStaff.show);
 
 export default routes;
